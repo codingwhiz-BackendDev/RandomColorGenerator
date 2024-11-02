@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <link rel="stylesheet" href="boot 5/css/bootstrap.css">
+  <title>A div changing color</title>
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
+    }
+
+    .button {
+      margin: auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+  </style>
+</head>
+
+<body id="body">
+  <div class="container justify-content-center rounded-circle"
+    style="border: 70px solid silver; width: 500px; height: 500px;" id="border"></div>
+  </div>
+
+  <div class="button">
+
+    <button type="button" class="btn btn-warning btn-lg" onclick="okay = setInterval(ChangeColor, 1)">Start</button>
+    <button type="button" class="btn btn-warning btn-lg" onclick="clearInterval(okay)">Stop</button>
+
+  </div>
+
+
+  <script>
+    function ChangeColor() {
+      border = document.getElementById("border");
+      border.style.backgroundColor = Math.floor(Math.random() * 0xffffff);
+      border.style.borderColor = Math.floor(Math.random() * 0xffffff);
+
+    }
+
+  </script>
+</body>
+
+</html>
